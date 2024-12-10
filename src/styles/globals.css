@@ -19,3 +19,134 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: white;
+}
+
+
+.hero {
+  background-image: url('/bg3.webp'); 
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contenedor de la tarjeta de película */
+.movie-card {
+  width: 260px;
+  height: auto; 
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.9);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  margin: 15px;
+  padding: 0 20px 10px;
+}
+
+/* Efecto de zoom y sombra al pasar el ratón */
+.movie-card:hover {
+  transform: translateY(-10px); /* Mueve la tarjeta hacia arriba */
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.9);
+}
+
+/* Contenedor de la imagen y la descripción */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+/* Estilo de la imagen de la película */
+.movie-image {
+  width: 100%; /* Ajusta el ancho al 100% del contenedor */
+  height: 100%; /* Ajusta la altura al 100% del contenedor */
+  object-fit: cover; /* Mantiene la relación de aspecto y recorta la imagen si es necesario */
+  border-bottom: 3px solid #f1f1f1; /* Línea separadora entre la imagen y el texto */
+  transition: transform 0.3s ease; /* Transición para el efecto hover */
+}
+/* Estilo para el texto de género */
+.movie-card p {
+  font-size: 1rem;
+  color: blue;
+  text-align: center;
+}
+.movie-card h3 {
+  font-size: 1rem;
+  color: #341010;
+  text-align: center;
+}
+
+/* Título */
+.swal-title {
+  color: #fa8072; /* Color personalizado */
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Contenido HTML */
+.swal-html {
+  color: #341010; /* Color del texto */
+  font-size: 1rem;
+  line-height: 1.6; /* Espaciado entre líneas */
+  text-align: left; /* Alinear a la izquierda */
+}
+
+/* Botón */
+.swal-button {
+  background-color: #007bff; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin bordes */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 1rem; /* Tamaño del texto */
+  font-weight: bold;
+  cursor: pointer; /* Cursor de puntero */
+  transition: background-color 0.3s ease; /* Efecto de transición */
+}
+
+/* Efecto hover en el botón */
+.swal-button:hover {
+  background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+}
+
+/* Botón de cancelar */
+.swal-button-cancel {
+  background-color: #dc3545; /* Color de fondo rojo */
+  color: white; /* Color del texto */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Botón de cancelar al pasar el ratón */
+.swal-button-cancel:hover {
+  background-color: #a71d2a; /* Rojo más oscuro */
+}
+
+
+/* Media queries para pantallas medianas */
+@media (max-width: 768px) {
+  .movieList {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 576px) {
+  .movieList {
+    grid-template-columns: 1fr;
+  }
+}
