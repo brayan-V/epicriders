@@ -1,6 +1,6 @@
 import React from "react";
 import Producto from "@/types/Producto";
-import ProductoCard from "@/components/ProductoCard";
+import ProductoCard from "@/components/ProductCard";
 interface OfertasProps {
   productos: Producto[];
 }

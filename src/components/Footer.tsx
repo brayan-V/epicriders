@@ -9,37 +9,39 @@ interface FooterColumn {
 const FooterComponent: React.FC = () => {
   const footerColumns: FooterColumn[] = [
     {
-      title: "ACERCA DE",
+      title: "NAVEGACIÓN",
       links: [
-        { name: "React", href: "https://reactjs.org/"},
-        { name: "Vite", href: "https://vitejs.dev/" },
-        { name: "TypeScript", href: "https://www.typescriptlang.org/" },
-        { name: "Bootstrap", href: "https://getbootstrap.com/" },
-      ], target: "_blank",
+        { name: "Inicio", href: "#" },
+        { name: "Productos", href: "#productos" },
+        { name: "Contacto", href: "#contacto" },
+      ],
+      target: "",
+    },
+    {
+      title: "SERVICIOS",
+      links: [
+        { name: "Clases de equitación", href: "#" },
+        { name: "Personalización de equipos", href: "#" },
+        { name: "Mantenimiento de equipos", href: "#" },
+      ],
+      target: "",
     },
     {
       title: "¡SÍGUENOS!",
       links: [
-        { name: "GitHub", href: "https://github.com/" },
-        { name: "Discord", href: "https://discord.com/" },
-      ], target: "_blank",
-    },
-    {
-      title: "¡MÁS PELIS!",
-      links: [
-        { name: "Netflix", href: "https://www.netflix.com/" },
-        { name: "Prime Video", href: "https://www.primevideo.com/" },
-        { name: "Disney+", href: "https://www.disneyplus.com/" },
-        { name: "HBO Max", href: "https://www.hbomax.com/" },
-        { name: "Apple TV+", href: "https://tv.apple.com/" },
-      ], target: "_blank",
+        { name: "Facebook", href: "https://facebook.com" },
+        { name: "Instagram", href: "https://instagram.com" },
+        { name: "Twitter", href: "https://twitter.com" },
+      ],
+      target: "_blank",
     },
     {
       title: "LEGAL",
       links: [
         { name: "Política de privacidad", href: "#" },
         { name: "Términos & Condiciones", href: "#" },
-      ], target: "",
+      ],
+      target: "",
     },
   ];
 
@@ -53,14 +55,14 @@ const FooterComponent: React.FC = () => {
             className="text-gray-300 hover:text-yellow-300 transition duration-300"
             rel="noopener noreferrer"
           >
-            <span className="text-4xl">🎥</span>
+            <span className="text-4xl">🏇</span>
           </a>
           <a
             href="#"
             className="text-gray-300 hover:text-yellow-300 transition duration-300"
             rel="noopener noreferrer"
           >
-            <h1 className="text-2xl font-extrabold">Movie List</h1>
+            <h1 className="text-2xl font-extrabold">EpicRiders</h1>
           </a>
         </div>
       </div>
@@ -94,42 +96,38 @@ const FooterComponent: React.FC = () => {
       {/* Copyright y redes sociales */}
       <div className="container mx-auto text-center">
         <p className="text-gray-400">
-          © 2024{" "}
+          © 2024 {" "}
           <a
             href="#"
             className="text-yellow-300 hover:underline transition duration-300"
           >
-            Movie List™
+            EpicRiders™
           </a>
         </p>
         <div className="flex justify-center space-x-4 mt-4">
           <a
-            href="#"
+            href="https://facebook.com"
             className="text-gray-300 hover:text-yellow-300 transition duration-300"
             aria-label="Facebook"
+            target="_blank"
           >
             <i className="fab fa-facebook-f"></i>
           </a>
           <a
-            href="#"
+            href="https://instagram.com"
             className="text-gray-300 hover:text-yellow-300 transition duration-300"
             aria-label="Instagram"
+            target="_blank"
           >
             <i className="fab fa-instagram"></i>
           </a>
           <a
-            href="#"
+            href="https://twitter.com"
             className="text-gray-300 hover:text-yellow-300 transition duration-300"
             aria-label="Twitter"
+            target="_blank"
           >
             <i className="fab fa-twitter"></i>
-          </a>
-          <a
-            href="#"
-            className="text-gray-300 hover:text-yellow-300 transition duration-300"
-            aria-label="GitHub"
-          >
-            <i className="fab fa-github"></i>
           </a>
         </div>
       </div>
