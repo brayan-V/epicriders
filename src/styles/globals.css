@@ -4,10 +4,16 @@
 
 
 body {
-  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background: white;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 
@@ -48,12 +54,11 @@ body {
 
 /* Estilo de la imagen de la película */
 .movie-image {
-  width: 100%; /* Ajusta el ancho al 100% del contenedor */
-  height: 100%; /* Ajusta la altura al 100% del contenedor */
-  object-fit: cover; /* Mantiene la relación de aspecto y recorta la imagen si es necesario */
-  border-bottom: 3px solid #f1f1f1; /* Línea separadora entre la imagen y el texto */
-  transition: transform 0.3s ease; /* Transición para el efecto hover */
+  width: 100%;
+  height: auto; /* Ajusta la altura automáticamente */
+  object-fit: cover;
 }
+
 /* Estilo para el texto de género */
 .movie-card p {
   font-size: 1rem;
@@ -121,6 +126,13 @@ body {
 
 /* Media queries para pantallas medianas */
 @media (max-width: 768px) {
+  .container {
+    padding: 10px; /* Reduce el padding */
+  }
+  .movie-card {
+    width: 220px; /* Ajusta el ancho de las tarjetas */
+    margin: 10px;
+  }
   .movieList {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
@@ -129,7 +141,32 @@ body {
 
 /* Media queries para pantallas pequeñas */
 @media (max-width: 576px) {
+  .container {
+    padding: 5px; /* Aún más reducido para pantallas pequeñas */
+  }
+  .hero {
+    height: 60vh; /* Reduce la altura del hero para pantallas pequeñas */
+  }
+  .movie-card {
+    width: 100%; /* Tarjetas de ancho completo */
+    margin: 5px 0; /* Margen superior e inferior reducido */
+  }
   .movieList {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
   }
 }
+@media (max-width: 576px) {
+  body {
+    font-size: 14px; /* Reduce el tamaño de la fuente */
+  }
+  .swal-title {
+    font-size: 1.2rem; /* Ajusta el tamaño del título */
+  }
+}
+@media (max-width: 576px) {
+  .swal-button, .swal-button-cancel {
+    padding: 8px 16px; /* Reduce el padding */
+    font-size: 0.9rem; /* Ajusta el tamaño de la fuente */
+  }
+}
+
